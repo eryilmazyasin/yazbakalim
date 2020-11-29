@@ -2,7 +2,6 @@ import React from 'react';
 
 const badges = (props) => {
 
-    const firstItem = props.words[0];
     
     
     return (
