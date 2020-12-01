@@ -7,7 +7,7 @@ const search = (props) => {
             <h5>{props.title}</h5>
             <form onSubmit={ props.formSubmit }>
 
-            <input type="text" className="form-control custom-input shadow" onChange={ props.inputHandle } value={ props.value } />
+            <input type="text" className="form-control custom-input shadow" onChange={ props.inputHandle } value={ props.value }/>
             </form>
             
         </div>        

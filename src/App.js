@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Search from './components/search';
 import Badges from './components/badges';
+import StopWatch from './components/stopWatch';
 
 const App = () => {
   const [input, setInput] = useState('');
@@ -84,27 +85,21 @@ const App = () => {
       setRandomArray(randomArray);
       console.log(randomArray);
     }
-    else {
-      randomArray.push({
-        colorName: 'siyah',
-        backgroundColor: 'black',
-        color: 'black',
-        correct: 'siyah'
-      })
-    }
-   
+  
     setInput('');
 
     if(randomArray.length <= 0) {
       alert('hepsini yaptın');
-    }
-    
+    } 
   }
+
+
   
   return (
     <div className="container">
       <div className="row d-flex align-items-center mt-4 mb-4">
         <Search title="Ne kadar hızlısın? " inputHandle={ inputHandle } formSubmit={ formSubmit } value={ input }/>
+        <StopWatch></StopWatch>
       </div>
       <div className="row mt-2">
         <Badges badges = { randomArray }/>
