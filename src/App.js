@@ -183,11 +183,8 @@ const App = () => {
     e.preventDefault();
     setInput("");
     if (randomArray[0].correct === input) {
-      console.log("evet");
-      console.log(randomArray);
       randomArray.splice(0, 1);
       setRandomArray(randomArray);
-      console.log(randomArray);
       setCorrectItem((correctItem += 1));
     } else {
       randomArray.splice(0, 1);
@@ -236,7 +233,7 @@ const App = () => {
             fullTime={fullTime}
           ></ProgressBarComponent>
           <Search
-            title="Ne yapacağını çok iyi biliyorsun (:"
+            title="Ne yapacağını çok iyi biliyorsun"
             inputHandle={inputHandle}
             formSubmit={formSubmit}
             value={input}
