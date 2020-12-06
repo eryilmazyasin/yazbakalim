@@ -182,7 +182,7 @@ const App = () => {
   const formSubmit = (e) => {
     e.preventDefault();
     setInput("");
-    if (randomArray[0].correct === input) {
+    if (randomArray[0].correct === input.toLowerCase()) {
       randomArray.splice(0, 1);
       setRandomArray(randomArray);
       setCorrectItem((correctItem += 1));
