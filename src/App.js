@@ -17,151 +17,151 @@ const App = () => {
       colorName: "kırmızı",
       backgroundColor: "#1044ff",
       color: "yellow",
-      correct: "mavi",
+      correct: ["mavi","blue"],
     },
     {
       colorName: "mavi",
       backgroundColor: "#fb0c0c",
       color: "white",
-      correct: "kırmızı",
+      correct: ["kırmızı","kirmizi","red"],
     },
     {
       colorName: "yeşil",
       backgroundColor: "#fff700",
       color: "black",
-      correct: "sarı",
+      correct: ["sarı","yellow","sari"],
     },
     {
       colorName: "gri",
       backgroundColor: "#000000",
       color: "yellow",
-      correct: "siyah",
+      correct: ["siyah","black"],
     },
     {
       colorName: "siyah",
       backgroundColor: "#f5b2be",
       color: "purple",
-      correct: "pembe",
+      correct: ["pembe","pink"],
     },
     {
       colorName: "turuncu",
       backgroundColor: "#fff700",
       color: "gray",
-      correct: "sarı",
+      correct: ["sarı","yellow","sari"],
     },
     {
       colorName: "lacivert",
       backgroundColor: "#000000",
       color: "white",
-      correct: "siyah",
+      correct: ["siyah","black"],
     },
     {
       colorName: "mor",
       backgroundColor: "#27da27",
       color: "purple",
-      correct: "yeşil",
+      correct: ["yeşil","yesil","green"],
     },
     {
       colorName: "lacivert",
       backgroundColor: "#adacac",
       color: "white",
-      correct: "gri",
+      correct: ["gri","gray"],
     },
     {
       colorName: "sarı",
       backgroundColor: "#ffab12",
       color: "white",
-      correct: "turuncu",
+      correct: ["turuncu","orange"],
     },
     {
       colorName: "yeşil",
       backgroundColor: "#800000",
       color: "green",
-      correct: "bordo",
+      correct: ["bordo","burgundy"],
     },
     {
       colorName: "siyah",
       backgroundColor: "#ffffff",
       color: "green",
-      correct: "beyaz",
+      correct: ["beyaz","white"],
     },
     {
       colorName: "mavi",
       backgroundColor: "#00ffff",
       color: "black",
-      correct: "turkuaz",
+      correct: ['turkuaz','turquoise'],
     },
     {
       colorName: "kahve",
       backgroundColor: "#a52a2a",
       color: "green",
-      correct: "kahverengi",
+      correct: ["kahverengi","brown"],
     },
     {
       colorName: "beyaz",
       backgroundColor: "#00008b",
       color: "white",
-      correct: "lacivert",
+      correct: ['lacivert', 'dark blue'],
     },
     {
       colorName: "sarı",
       backgroundColor: "#27da27",
       color: "yellow",
-      correct: "yeşil",
+      correct: ["yeşil","yesil","green"],
     },
     {
       colorName: "sarı",
       backgroundColor: "#00ffff",
       color: "green",
-      correct: "turkuaz",
+      correct: ['turkuaz','turquoise'],
     },
     {
       colorName: "koyu",
       backgroundColor: "#a52a2a",
       color: "white",
-      correct: "kahverengi",
+      correct: ["kahverengi","brown"],
     },
     {
       colorName: "bordo",
       backgroundColor: "#00008b",
       color: "orange",
-      correct: "lacivert",
+      correct: ['lacivert', 'dark blue'],
     },
     {
       colorName: "sarı",
       backgroundColor: "#27da27",
       color: "yellow",
-      correct: "yeşil",
+      correct: ["yeşil","yesil","green"],
     },
     {
       colorName: "turkuaz",
       backgroundColor: "#800000",
       color: "green",
-      correct: "bordo",
+      correct: ["bordo","burgundy"],
     },
     {
       colorName: "sarı",
       backgroundColor: "#ffffff",
       color: "yellow",
-      correct: "beyaz",
+      correct: ['beyaz','white'],
     },
     {
       colorName: "pembe",
       backgroundColor: "#00ffff",
       color: "pink",
-      correct: "turkuaz",
+      correct: ['turkuaz','turquoise'],
     },
     {
       colorName: "siyah",
       backgroundColor: "#a52a2a",
       color: "black",
-      correct: "kahverengi",
+      correct: ['kahverengi','brown'],
     },
     {
       colorName: "beyaz",
       backgroundColor: "#00008b",
       color: "yellow",
-      correct: "lacivert",
+      correct: ['lacivert', 'dark blue'],
     },
   ]);
 
@@ -175,14 +175,14 @@ const App = () => {
   useEffect(() => {
     let newRandomArray = badge
       .sort(() => Math.random() - Math.random())
-      .slice(0, );
+      .slice(0, 4);
     setRandomArray((randomArray = newRandomArray));
   }, []);
 
   const formSubmit = (e) => {
     e.preventDefault();
     setInput("");
-    if (randomArray[0].correct === input.toLowerCase()) {
+    if (randomArray[0].correct.includes(input.toLowerCase())) {
       randomArray.splice(0, 1);
       setRandomArray(randomArray);
       setCorrectItem((correctItem += 1));
