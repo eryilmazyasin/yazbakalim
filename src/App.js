@@ -175,7 +175,7 @@ const App = () => {
   useEffect(() => {
     let newRandomArray = badge
       .sort(() => Math.random() - Math.random())
-      .slice(0, 4);
+      .slice(0, );
     setRandomArray((randomArray = newRandomArray));
   }, []);
 
