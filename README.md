@@ -2,6 +2,12 @@
 
 https://befast.netlify.app/
 
+#About project
+
+Fill the input according to the background colors in the boxes.
+
+Time starts when you start.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
