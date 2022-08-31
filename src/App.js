@@ -233,7 +233,7 @@ const App = () => {
             fullTime={fullTime}
           ></ProgressBarComponent>
           <Search
-            title="Ne yapacağını çok iyi biliyorsun"
+            title="Kutuların arkasındaki renkleri hızlıca tahmin et."
             inputHandle={inputHandle}
             formSubmit={formSubmit}
             value={input}
